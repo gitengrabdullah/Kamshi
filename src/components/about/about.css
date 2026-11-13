@@ -1,0 +1,414 @@
+
+.kamshi-about {
+  --ka-gold: #e5a34d;
+  --ka-cream: #f3d5ad;
+
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: clip;
+
+  padding: 110px 5%;
+
+  background:
+    radial-gradient(
+      ellipse at 25% 55%,
+      rgba(133, 58, 20, 0.2),
+      transparent 55%
+    ),
+    linear-gradient(
+      135deg,
+      #170904 0%,
+      #2a1209 55%,
+      #140703 100%
+    );
+
+  color: var(--ka-cream);
+}
+
+.kamshi-about-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(45px, 7vw, 110px);
+
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+/* Visual */
+
+.kamshi-about-visual {
+  position: relative;
+  min-width: 0;
+  padding: 25px 35px 35px 0;
+  perspective: 1200px;
+}
+
+.kamshi-about-image-frame {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  border-radius: 180px 180px 15px 15px;
+  border: 1px solid rgba(229, 163, 77, 0.45);
+  background: #281209;
+
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.3),
+    0 0 45px rgba(174, 83, 25, 0.12);
+
+  transition: transform 0.6s ease;
+}
+
+.kamshi-about-visual:hover .kamshi-about-image-frame {
+  transform: rotateY(-4deg) rotateX(2deg);
+}
+
+.kamshi-about-image-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.kamshi-about-visual:hover img {
+  transform: scale(1.05);
+}
+
+.kamshi-about-image-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 40%,
+    rgba(20, 7, 3, 0.75) 100%
+  );
+  pointer-events: none;
+}
+
+.kamshi-about-image-label {
+  position: absolute;
+  bottom: 35px;
+  left: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #f5cf9c;
+  font-size: 10px;
+  letter-spacing: 2.5px;
+}
+
+.kamshi-about-floating-card {
+  position: absolute;
+  z-index: 3;
+  right: 0;
+  bottom: 90px;
+
+  width: 205px;
+  padding: 28px 18px;
+
+  text-align: center;
+
+  background: linear-gradient(
+    145deg,
+    rgba(69, 31, 13, 0.96),
+    rgba(25, 9, 4, 0.98)
+  );
+
+  border: 1px solid rgba(229, 163, 77, 0.55);
+  border-radius: 12px;
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(10px);
+}
+
+.kamshi-about-floating-card > span {
+  display: block;
+  color: #f4d2a5;
+  font-family: Georgia, serif;
+  font-size: 38px;
+}
+
+.kamshi-about-floating-card small {
+  display: block;
+  margin-top: 5px;
+  color: #dba76b;
+  font-size: 8px;
+  letter-spacing: 1.5px;
+}
+
+.kamshi-about-card-line {
+  width: 65px;
+  height: 1px;
+  margin: 17px auto;
+  background: var(--ka-gold);
+}
+
+.kamshi-about-floating-card p {
+  margin: 0;
+  color: #dfbb94;
+  font-family: Georgia, serif;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.kamshi-about-glow {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  top: 15%;
+  left: 10%;
+  background: rgba(178, 76, 20, 0.13);
+  filter: blur(75px);
+  pointer-events: none;
+}
+
+/* Content */
+
+.kamshi-about-content {
+  min-width: 0;
+}
+
+.kamshi-about-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 25px;
+  color: var(--ka-gold);
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+.kamshi-about-eyebrow-line {
+  width: 40px;
+  height: 1px;
+  background: var(--ka-gold);
+}
+
+.kamshi-about-content h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(37px, 4vw, 59px);
+  font-weight: 400;
+  line-height: 1.22;
+  letter-spacing: -1px;
+}
+
+.kamshi-about-content h2 em {
+  color: #e7a969;
+  font-weight: 400;
+}
+
+.kamshi-about-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 30px 0;
+  color: var(--ka-gold);
+}
+
+.kamshi-about-divider span {
+  width: 75px;
+  height: 1px;
+  background: var(--ka-gold);
+}
+
+.kamshi-about-lead {
+  margin: 0 0 20px;
+  color: #f0d0ad;
+  font-family: Georgia, serif;
+  font-size: 19px;
+  line-height: 1.8;
+}
+
+.kamshi-about-description {
+  margin: 0 0 18px;
+  color: #c7a98b;
+  font-size: 13px;
+  line-height: 2;
+}
+
+/* Highlights */
+
+.kamshi-about-highlights {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin: 35px 0;
+}
+
+.kamshi-about-highlight {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.kamshi-about-highlight-icon {
+  display: grid;
+  place-items: center;
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  border: 1px solid rgba(229, 163, 77, 0.3);
+  border-radius: 50%;
+  color: var(--ka-gold);
+}
+
+.kamshi-about-highlight h3 {
+  margin: 0 0 7px;
+  color: #f0d3b2;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.kamshi-about-highlight p {
+  margin: 0;
+  color: #a98767;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+/* Button */
+
+.kamshi-about-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+
+  padding: 16px 27px;
+  border-radius: 40px;
+
+  background: linear-gradient(
+    135deg,
+    #f5b45d,
+    #d98a32
+  );
+
+  color: #1b0b04;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.kamshi-about-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(229, 163, 77, 0.2);
+}
+
+/* Signature */
+
+.kamshi-about-signature {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 45px;
+}
+
+.kamshi-about-signature span {
+  color: #e7b27a;
+  font-family: Georgia, serif;
+  font-size: 35px;
+  font-style: italic;
+}
+
+.kamshi-about-signature small {
+  margin-top: 3px;
+  color: #a98767;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+  .kamshi-about {
+    padding: 80px 4%;
+  }
+
+  .kamshi-about-container {
+    gap: 35px;
+  }
+
+  .kamshi-about-image-frame {
+    height: 520px;
+  }
+
+  .kamshi-about-floating-card {
+    width: 165px;
+    padding: 20px 12px;
+  }
+
+  .kamshi-about-highlights {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+  .kamshi-about {
+    padding: 70px 18px;
+  }
+
+  .kamshi-about-container {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .kamshi-about-visual {
+    padding: 0 20px 20px 0;
+  }
+
+  .kamshi-about-image-frame {
+    height: 430px;
+    border-radius: 150px 150px 12px 12px;
+  }
+
+  .kamshi-about-floating-card {
+    right: 0;
+    bottom: 45px;
+    width: 150px;
+  }
+
+  .kamshi-about-floating-card > span {
+    font-size: 30px;
+  }
+
+  .kamshi-about-content h2 {
+    font-size: clamp(34px, 8vw, 47px);
+  }
+
+  .kamshi-about-lead {
+    font-size: 17px;
+  }
+
+  .kamshi-about-description {
+    font-size: 12px;
+  }
+
+  .kamshi-about-highlights {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .kamshi-about-signature {
+    margin-top: 35px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kamshi-about-image-frame,
+  .kamshi-about-image-frame img,
+  .kamshi-about-button {
+    transition: none;
+  }
+}

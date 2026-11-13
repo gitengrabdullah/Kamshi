@@ -1,0 +1,120 @@
+
+.kamshi-benefits {
+  width: 100%;
+  position: relative;
+  background: linear-gradient(
+    110deg,
+    #1b0b05 0%,
+    #301509 50%,
+    #1b0b05 100%
+  );
+
+  border-top: 1px solid rgba(229, 163, 77, 0.2);
+  border-bottom: 1px solid rgba(229, 163, 77, 0.25);
+
+  color: #f3d5ad;
+}
+
+.kamshi-benefits-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 27px 5%;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: center;
+}
+
+.kamshi-benefit-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+
+  min-height: 54px;
+  padding: 5px 22px;
+}
+
+.kamshi-benefit-item:not(:last-child) {
+  border-right: 1px solid rgba(229, 163, 77, 0.19);
+}
+
+.kamshi-benefit-icon {
+  color: #e5a34d;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.kamshi-benefit-item:hover .kamshi-benefit-icon {
+  transform: translateY(-4px);
+}
+
+.kamshi-benefit-content h3 {
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff0dc;
+  margin: 0 0 6px;
+  white-space: nowrap;
+}
+
+.kamshi-benefit-content p {
+  font-size: 11px;
+  color: #c7a98b;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Tablet */
+
+@media (max-width: 1050px) {
+  .kamshi-benefits-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 20px;
+  }
+
+  .kamshi-benefit-item:nth-child(2) {
+    border-right: none;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .kamshi-benefits-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 22px 12px;
+    gap: 20px 4px;
+  }
+
+  .kamshi-benefit-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 9px;
+    padding: 8px 4px;
+  }
+
+  .kamshi-benefit-item:not(:last-child) {
+    border-right: none;
+  }
+
+  .kamshi-benefit-icon svg {
+    width: 27px;
+    height: 27px;
+  }
+
+  .kamshi-benefit-content h3 {
+    font-size: 12px;
+    white-space: normal;
+  }
+
+  .kamshi-benefit-content p {
+    font-size: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kamshi-benefit-icon {
+    transition: none;
+  }
+}
