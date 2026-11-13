@@ -1,10 +1,10 @@
 
 import React from "react";
 
-import Header from "../components/Header/Header";
-import Hero from "../components/Hero/Hero";
+import Header from "../components/header/header";
+import Hero from "../components/hero/hero";
 
-import "./HomePage.css";
+import "./homePage.css";
 
 export default function HomePage() {
   return (
