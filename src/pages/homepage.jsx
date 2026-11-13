@@ -4,7 +4,7 @@ import React from "react";
 import Header from "../components/header/header";
 import Hero from "../components/hero/hero";
 
-import "./homePage.css";
+import "./homepage.css";
 
 export default function HomePage() {
   return (
