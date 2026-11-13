@@ -1,0 +1,500 @@
+
+.km-hero {
+  --km-gold: #e5a34d;
+  --km-cream: #f3d5ad;
+
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  min-height: 650px;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      ellipse at 53% 65%,
+      rgba(166, 69, 17, 0.42),
+      transparent 47%
+    ),
+    linear-gradient(
+      115deg,
+      #120702 0%,
+      #2d1207 48%,
+      #140803 100%
+    );
+  color: var(--km-cream);
+}
+
+.km-hero-glow {
+  position: absolute;
+  z-index: -1;
+  width: 70%;
+  height: 90%;
+  left: 20%;
+  top: 12%;
+  background: radial-gradient(
+    ellipse,
+    rgba(239, 122, 34, 0.24),
+    transparent 67%
+  );
+  filter: blur(65px);
+  pointer-events: none;
+}
+
+.km-hero-grain {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.2;
+  background: repeating-linear-gradient(
+    115deg,
+    transparent 0,
+    transparent 3px,
+    rgba(255, 200, 120, 0.025) 4px
+  );
+  pointer-events: none;
+}
+
+.km-hero-inner {
+  max-width: 1500px;
+  min-height: 650px;
+  margin: auto;
+  padding: 70px 5% 55px;
+  display: grid;
+  grid-template-columns: 34% 31% 35%;
+  align-items: center;
+  position: relative;
+}
+
+/* Left branding */
+
+.km-hero-content {
+  position: relative;
+  z-index: 5;
+}
+
+.km-hero-eyebrow {
+  display: block;
+  color: #edbb83;
+  font-size: 11px;
+  letter-spacing: 5px;
+  margin-bottom: 25px;
+}
+
+.km-hero-content h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(75px, 9vw, 145px);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -6px;
+}
+
+.km-hero-owner {
+  margin: 10px 0 0 20px;
+  font-family: Georgia, serif;
+  font-size: clamp(17px, 2vw, 26px);
+}
+
+.km-hero-location {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 24px 0 34px 28px;
+  font-size: 11px;
+  letter-spacing: 6px;
+}
+
+.km-hero-location span {
+  width: 43px;
+  height: 1px;
+  background: var(--km-gold);
+}
+
+.km-hero-tagline {
+  font-family: Georgia, serif;
+  font-size: clamp(23px, 2.2vw, 34px);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.3;
+  margin: 0 0 32px;
+}
+
+.km-hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 17px;
+}
+
+.km-hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  padding: 15px 23px;
+  border-radius: 40px;
+  background: linear-gradient(
+    120deg,
+    #f5b45d,
+    #d98a32
+  );
+  color: #1c0b04;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 8px 25px rgba(211, 103, 27, 0.2);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.km-hero-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(235, 136, 43, 0.38);
+}
+
+.km-hero-discover {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #f2dfca;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.km-play-circle {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--km-gold);
+  border-radius: 50%;
+  color: #f7b55b;
+}
+
+/* Center perfume */
+
+.km-hero-perfume {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  min-height: 460px;
+  perspective: 1000px;
+}
+
+.km-product-aura {
+  position: absolute;
+  width: 95%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 133, 29, 0.35),
+    transparent 65%
+  );
+  filter: blur(30px);
+}
+
+.km-perfume-image-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 365px;
+  z-index: 2;
+  transform-style: preserve-3d;
+}
+
+.km-perfume-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 28px;
+  filter: drop-shadow(0 30px 35px rgba(0, 0, 0, 0.45));
+  -webkit-mask-image: radial-gradient(
+    ellipse 75% 78% at center,
+    #000 50%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+    ellipse 75% 78% at center,
+    #000 50%,
+    transparent 100%
+  );
+}
+
+.km-product-shadow {
+  position: absolute;
+  width: 65%;
+  height: 35px;
+  bottom: 15px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  filter: blur(20px);
+}
+
+/* Right incense */
+
+.km-hero-incense {
+  position: relative;
+  z-index: 4;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 0 0 20px;
+}
+
+.km-incense-heading {
+  position: relative;
+  z-index: 3;
+  padding: 5px 0 0 25px;
+  border-left: 1px solid rgba(229, 163, 77, 0.35);
+}
+
+.km-new-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border: 1px solid rgba(229, 163, 77, 0.7);
+  border-radius: 30px;
+  color: #f3bd78;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.km-incense-heading h2 {
+  margin: 17px 0 10px;
+  font-family: Georgia, serif;
+  font-size: clamp(34px, 3.5vw, 56px);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.km-incense-heading p {
+  max-width: 320px;
+  margin: 0 0 23px;
+  color: #ead3bb;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.km-incense-product {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  align-self: center;
+  margin-top: 25px;
+}
+
+.km-incense-product img {
+  display: block;
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 22px;
+  border: 1px solid rgba(229, 163, 77, 0.22);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.4);
+  -webkit-mask-image: radial-gradient(
+    ellipse 78% 80% at center,
+    #000 65%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+    ellipse 78% 80% at center,
+    #000 65%,
+    transparent 100%
+  );
+}
+
+/* Decorative smoke */
+
+.km-smoke {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  bottom: 60%;
+  width: 130px;
+  height: 160px;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.km-smoke span {
+  position: absolute;
+  bottom: 0;
+  left: 45%;
+  width: 24px;
+  height: 120px;
+  border-radius: 50%;
+  border-left: 8px solid rgba(235, 220, 207, 0.18);
+  filter: blur(9px);
+  animation: kmSmokeRise 5s ease-out infinite;
+}
+
+.km-smoke span:nth-child(2) {
+  left: 55%;
+  animation-delay: 1.5s;
+}
+
+.km-smoke span:nth-child(3) {
+  left: 35%;
+  animation-delay: 3s;
+}
+
+@keyframes kmSmokeRise {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) rotate(-15deg) scale(0.5);
+  }
+  35% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-110px) rotate(25deg) scale(1.8);
+  }
+}
+
+.km-hero-bottom-line {
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  width: 90%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(229, 163, 77, 0.6),
+    transparent
+  );
+}
+
+/* Tablet */
+
+@media (max-width: 1100px) {
+  .km-hero-inner {
+    grid-template-columns: 42% 58%;
+    gap: 0;
+  }
+
+  .km-hero-perfume {
+    min-height: 350px;
+  }
+
+  .km-hero-incense {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    align-items: center;
+    padding: 35px 0;
+  }
+
+  .km-incense-product {
+    width: 45%;
+    margin: 0;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+  .km-hero {
+    min-height: auto;
+  }
+
+  .km-hero-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 22px 50px;
+    text-align: center;
+  }
+
+  .km-hero-content {
+    width: 100%;
+  }
+
+  .km-hero-eyebrow {
+    font-size: 9px;
+    letter-spacing: 4px;
+    margin-bottom: 22px;
+  }
+
+  .km-hero-content h1 {
+    font-size: clamp(76px, 19vw, 112px);
+    letter-spacing: -4px;
+  }
+
+  .km-hero-owner {
+    margin: 8px 0 0;
+    font-size: 19px;
+  }
+
+  .km-hero-location {
+    justify-content: center;
+    margin: 22px 0 28px;
+    font-size: 9px;
+  }
+
+  .km-hero-tagline {
+    font-size: 26px;
+    margin-bottom: 25px;
+  }
+
+  .km-hero-actions {
+    justify-content: center;
+  }
+
+  .km-hero-perfume {
+    width: 100%;
+    min-height: 0;
+    margin-top: 30px;
+  }
+
+  .km-perfume-image-wrap {
+    max-width: 285px;
+  }
+
+  .km-product-shadow {
+    bottom: -8px;
+  }
+
+  .km-hero-incense {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0 0;
+  }
+
+  .km-incense-heading {
+    padding: 0;
+    border-left: none;
+  }
+
+  .km-incense-heading h2 {
+    font-size: 38px;
+  }
+
+  .km-incense-heading p {
+    margin: 0 auto 22px;
+  }
+
+  .km-incense-product {
+    width: 100%;
+    max-width: 340px;
+    margin-top: 35px;
+  }
+
+  .km-incense-product img {
+    max-height: 220px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .km-smoke span {
+    animation: none;
+  }
+
+  .km-hero-btn,
+  .km-hero-discover {
+    transition: none;
+  }
+}
